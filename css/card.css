@@ -1,0 +1,145 @@
+/* start Global Ryles */
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+
+/* End Global Rules */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--dark-cyan);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body .section {
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+body .section .bg.top {
+    position: absolute;
+    width: 860px;
+    top: -400px;
+    left: -340px;
+    z-index: -5;
+}
+
+body .section .bg.bottom {
+    position: absolute;
+    width: 860px;
+    bottom: -400px;
+    right: -340px;
+    z-index: -5;
+}
+
+@media (max-width:950px) {
+    body .section .bg.bottom {
+        width: 400px;
+        bottom: -140px;
+        right: -120px;
+    }
+    body .section .bg.top {
+        width: 400px;
+        top: -140px;
+        left: -120px;
+    }
+}
+
+.section .card {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media (max-width:375px) {
+    .section .card {
+        width: 300px;
+    }
+}
+
+.section .card .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -50px;
+    position: relative;
+}
+
+.section .card .info span {
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.section .card .info span img {
+    border-radius: 50%;
+}
+
+.section .card .info p {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+.section .card .info p:first-of-type {
+    font-weight: 700;
+}
+
+.section .card .info p span,
+.section .card .info p:last-of-type {
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+.section .card .reach {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 0.2px solid var(--dark-gray);
+    padding: 5px 0;
+}
+
+.section .card .reach p {
+    font-size: 18px;
+    margin: 10px 0 10px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section .card .reach p span {
+    color: var(--dark-gray);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.attribution {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 11px;
+    width: 100%;
+    font-weight: 700;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
